@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "GetUsers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetUsers</h2>
+
+<table style="border-width:thick;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in ViewBag.Users)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Surname</td>
+                <td>@user.Username</td>
+            </tr>
+        }
+    </tbody>
+</table>

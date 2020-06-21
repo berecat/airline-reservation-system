@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "AddCustomer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddCustomer</h2>
+
+<div>
+    <form>
+        <h3>Customer Info</h3>
+        <div>
+            <label for="txtName">Customer Name</label>
+            <input id="txtName" type="text" />
+        </div>
+
+        <div>
+            <label for="txtSurname">Surname</label>
+            <input id="txtSurname" type="text" />
+        </div>
+
+        <div>
+            <label for="txtBirthDate">Birth Date</label>
+            <input id="txtBirthDate" type="datetime" />
+        </div>
+
+        <div>
+            <label for="txtCreditLimit">Credit Limit</label>
+            <input id="txtCreditLimit" type="text" />
+        </div>
+
+        <div>
+            <button type="submit">Kaydet</button>
+        </div>
+    </form>
+</div>

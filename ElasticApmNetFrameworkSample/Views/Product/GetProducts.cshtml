@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "GetProducts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetProducts</h2>
+
+<table style="border-width:thick;">
+    <thead>
+        <tr>
+            <th>Product Barcode</th>
+            <th>Product Name</th>
+            <th>Product Unit Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in ViewBag.Products)
+        {
+            <tr>
+                <td>@product.ProductBarcode</td>
+                <td>@product.ProductName</td>
+                <td>product.ProductUnitPrice</td>
+            </tr>
+        }
+    </tbody>
+</table>

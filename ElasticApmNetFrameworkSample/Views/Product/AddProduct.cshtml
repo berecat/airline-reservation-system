@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddProduct</h2>
+
+<div>
+    <form>
+        <h3>Product Info</h3>
+        <div>
+            <label for="txtProductName">Product Name</label>
+            <input id="txtProductName" type="text" />
+        </div>
+
+        <div>
+            <label for="txtProductBarcode">Product Barcode</label>
+            <input id="txtProductBarcode" type="text" />
+        </div>
+
+        <div>
+            <label for="txtUnitPrice">Unit Price</label>
+            <input id="txtUnitPrice" type="datetime" />
+        </div>
+
+        <div>
+            <button type="submit">Kaydet</button>
+        </div>
+    </form>
+</div>

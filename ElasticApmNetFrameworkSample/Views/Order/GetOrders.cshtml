@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "GetOrders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetOrders</h2>
+
+<table style="border-width:thick;">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>User Full Name</th>
+            <th>Credit Card Number</th>
+            <th>Credit Card Bankname</th>
+            <th>Product Barcode</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Order Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in ViewBag.Orders)
+        {
+            <tr>
+                <td>@order.Username</td>
+                <td>@order.UserFullname</td>
+                <td>@order.CreditCardNumber</td>
+                <td>@order.CreditCardBankName</td>
+                <td>@order.ProductBarcode</td>
+                <td>@order.ProductName</td>
+                <td>@order.Quantity</td>
+                <td>@order.TotalPrice</td>
+                <td>@order.OrderDate</td>
+            </tr>
+        }
+    </tbody>
+</table>

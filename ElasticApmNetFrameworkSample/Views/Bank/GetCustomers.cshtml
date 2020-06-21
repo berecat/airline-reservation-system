@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "GetCustomers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetCustomers</h2>
+
+<table style="border-width:thick;">
+    <thead>
+        <tr>
+            <th>Customer Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Birth Date</th>
+            <th>Credit Limit</th>
+            <th>Credit Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in ViewBag.Customers)
+        {
+            <tr>
+                <td>@customer.CustomerId</td>
+                <td>@customer.Name</td>
+                <td>@customer.Surname</td>
+                <td>@customer.BirthDate</td>
+                <td>@customer.CreditLimit</td>
+                <td>@customer.CreditBalance</td>
+            </tr>
+        }
+    </tbody>
+</table>
