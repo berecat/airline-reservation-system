@@ -29,6 +29,12 @@ jobs:
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.2
 
+      - name: Setup NuGet.exe for use with actions
+        uses: NuGet/setup-nuget@v1.0.5
+        
+      - name: Restore Nuget Packages
+        run: nuget restore ElasticApmNetFrameworkSample.sln
+
       # Runs a single command using the runners shell
       - name: Build Project
         run: msbuild ElasticApmNetFrameworkSample.sln  /t:build
